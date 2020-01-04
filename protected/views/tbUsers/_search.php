@@ -27,6 +27,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'login'); ?>
+		<?php echo $form->textArea($model,'login',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'SuperAdministrators'); ?>
 		<?php echo $form->textField($model,'SuperAdministrators'); ?>
 	</div>

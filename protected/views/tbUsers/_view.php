@@ -17,6 +17,14 @@
 	<?php echo CHtml::encode($data->office); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('login')); ?>:</b>
+	<?php echo CHtml::encode($data->login); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('SuperAdministrators')); ?>:</b>
 	<?php echo CHtml::encode($data->SuperAdministrators); ?>
 	<br />

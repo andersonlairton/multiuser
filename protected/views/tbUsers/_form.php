@@ -32,6 +32,18 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'login'); ?>
+		<?php echo $form->textArea($model,'login',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'login'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->textArea($model,'password',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'password'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'SuperAdministrators'); ?>
 		<?php echo $form->textField($model,'SuperAdministrators'); ?>
 		<?php echo $form->error($model,'SuperAdministrators'); ?>
