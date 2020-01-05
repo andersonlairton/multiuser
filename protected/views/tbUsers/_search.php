@@ -22,6 +22,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'surname'); ?>
+		<?php echo $form->textArea($model,'surname',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'office'); ?>
 		<?php echo $form->textArea($model,'office',array('rows'=>6, 'cols'=>50)); ?>
 	</div>

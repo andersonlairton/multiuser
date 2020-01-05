@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'tb_users':
  * @property integer $id
  * @property string $name
+ * @property string $surname
  * @property string $office
  * @property string $login
  * @property string $password
@@ -29,11 +30,11 @@ class TbUsers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, office, login, password, SuperAdministrators', 'required'),
+			array('name, surname, office, login, password, SuperAdministrators', 'required'),
 			array('SuperAdministrators', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, office, login, password, SuperAdministrators', 'safe', 'on'=>'search'),
+			array('id, name, surname, office, login, password, SuperAdministrators', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +59,7 @@ class TbUsers extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
+			'surname' => 'Surname',
 			'office' => 'Office',
 			'login' => 'Login',
 			'password' => 'Password',
@@ -85,6 +87,7 @@ class TbUsers extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('surname',$this->surname,true);
 		$criteria->compare('office',$this->office,true);
 		$criteria->compare('login',$this->login,true);
 		$criteria->compare('password',$this->password,true);

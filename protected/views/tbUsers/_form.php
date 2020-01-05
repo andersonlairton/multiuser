@@ -26,6 +26,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'surname'); ?>
+		<?php echo $form->textArea($model,'surname',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'surname'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'office'); ?>
 		<?php echo $form->textArea($model,'office',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'office'); ?>
