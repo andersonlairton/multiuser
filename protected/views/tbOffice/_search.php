@@ -18,7 +18,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'office_name'); ?>
-		<?php echo $form->textField($model,'office_name'); ?>
+		<?php echo $form->textArea($model,'office_name',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">

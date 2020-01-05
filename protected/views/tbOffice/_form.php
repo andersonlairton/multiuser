@@ -21,7 +21,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'office_name'); ?>
-		<?php echo $form->textField($model,'office_name'); ?>
+		<?php echo $form->textArea($model,'office_name',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'office_name'); ?>
 	</div>
 
