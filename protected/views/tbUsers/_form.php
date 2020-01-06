@@ -33,8 +33,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'office'); ?>
-		<?php echo $form->textArea($model,'office',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'office'); ?>
+		<?php
+		$models=TbOffice::model()->findAll(1);
+		$valores=CHtml::listData($models,'id','office_name');
+		echo $form->dropDownList($model,'office',array(null=>'select position',$valores));
+		?>
+		<?php echo $form->error($model,'office');?>
 	</div>
 
 	<div class="row">

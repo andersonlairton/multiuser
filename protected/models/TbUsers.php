@@ -30,11 +30,12 @@ class TbUsers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, surname, office, login, password, SuperAdministrators', 'required'),
+			array('name, surname, office, password, SuperAdministrators', 'required'),
 			array('SuperAdministrators', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, surname, office, login, password, SuperAdministrators', 'safe', 'on'=>'search'),
+			['login','getCreateLogin'],
 		);
 	}
 
@@ -104,6 +105,16 @@ class TbUsers extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return TbUsers the static model class
 	 */
+	
+	 //criando um login com nome e sobrenome
+	 public function getCreateLogin($attr){
+		 $name = str_replace(" ","",$this->name);
+		 $surname=str_replace(" ","",$this->surname);
+
+		$this->login=$name.'.'.$surname;
+		return $this->login;
+	 }
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
