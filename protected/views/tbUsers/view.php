@@ -26,7 +26,7 @@ $this->menu=array(
 		'surname',
 		'office',
 		'login',
-		'password',
+		//'password',
 		'SuperAdministrators',
 	),
 )); ?>
