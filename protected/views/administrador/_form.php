@@ -19,20 +19,26 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row"> 
-		<?php echo $form->labelEx($model,'nivel'); ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'level'); ?>
 		<?php
 		$models=TbOffice::model()->findAll(1);
 		$valores=CHtml::listData($models,'id','office_name');
-		echo $form->dropDownList($model,'nivel',array(null=>'select position',$valores));
+		echo $form->dropDownList($model,'level',array(null=>'select position',$valores));
 		?>
-		<?php echo $form->error($model,'nivel'); ?>
+		<?php echo $form->error($model,'level'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nome'); ?>
-		<?php echo $form->textField($model,'nome',array('size'=>60,'maxlength'=>300)); ?>
-		<?php echo $form->error($model,'nome'); ?>
+		<?php echo $form->labelEx($model,'superuser'); ?>
+		<?php echo $form->textField($model,'superuser'); ?>
+		<?php echo $form->error($model,'superuser'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
@@ -42,15 +48,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'usuario'); ?>
-		<?php echo $form->textField($model,'usuario',array('size'=>60,'maxlength'=>300)); ?>
-		<?php echo $form->error($model,'usuario'); ?>
+		<?php echo $form->labelEx($model,'user'); ?>
+		<?php echo $form->textField($model,'user',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'user'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'senha'); ?>
-		<?php echo $form->textField($model,'senha',array('size'=>60,'maxlength'=>300)); ?>
-		<?php echo $form->error($model,'senha'); ?>
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'password'); ?>
 	</div>
 
 	<div class="row buttons">

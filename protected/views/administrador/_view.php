@@ -9,24 +9,28 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nivel')); ?>:</b>
-	<?php echo CHtml::encode($data->nivel); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('level')); ?>:</b>
+	<?php echo CHtml::encode($data->level); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nome')); ?>:</b>
-	<?php echo CHtml::encode($data->nome); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('superuser')); ?>:</b>
+	<?php echo CHtml::encode($data->superuser); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
+	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usuario')); ?>:</b>
-	<?php echo CHtml::encode($data->usuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('user')); ?>:</b>
+	<?php echo CHtml::encode($data->user); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('senha')); ?>:</b>
-	<?php echo CHtml::encode($data->senha); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
 	<br />
 
 

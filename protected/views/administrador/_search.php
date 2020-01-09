@@ -17,13 +17,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nivel'); ?>
-		<?php echo $form->textField($model,'nivel'); ?>
+		<?php echo $form->label($model,'level'); ?>
+		<?php echo $form->textField($model,'level'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nome'); ?>
-		<?php echo $form->textField($model,'nome',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->label($model,'superuser'); ?>
+		<?php echo $form->textField($model,'superuser'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>300)); ?>
 	</div>
 
 	<div class="row">
@@ -32,13 +37,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'usuario'); ?>
-		<?php echo $form->textField($model,'usuario',array('size'=>60,'maxlength'=>300)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'senha'); ?>
-		<?php echo $form->textField($model,'senha',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->label($model,'user'); ?>
+		<?php echo $form->textField($model,'user',array('size'=>60,'maxlength'=>300)); ?>
 	</div>
 
 	<div class="row buttons">

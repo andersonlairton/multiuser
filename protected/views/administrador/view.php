@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Administradors'=>array('index'),
-	$model->id,
+	$model->name,
 );
 
 $this->menu=array(
@@ -22,10 +22,11 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'nivel',
-		'nome',
+		'level',
+		'superuser',
+		'name',
 		'email',
-		'usuario',
-		'senha',
+		'user',
+		'password',
 	),
 )); ?>
