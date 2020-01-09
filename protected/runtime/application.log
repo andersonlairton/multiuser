@@ -4498,3 +4498,132 @@ Stack trace:
 REQUEST_URI=/multiuser/index.php?r=administrador/create
 HTTP_REFERER=http://localhost/multiuser/index.php?r=Administrador
 ---
+2020/01/09 04:05:38 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/c...')
+#9 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp2\htdocs\multiuser\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/multiuser/index.php?r=administrador/create
+HTTP_REFERER=http://localhost/multiuser/index.php?r=Administrador
+---
+2020/01/09 04:07:04 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tbOffice/create')
+#9 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp2\htdocs\multiuser\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/multiuser/index.php?r=tbOffice/create
+HTTP_REFERER=http://localhost/multiuser/index.php?r=tbOffice
+---
+2020/01/09 04:09:14 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tbOffice/create')
+#9 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp2\htdocs\multiuser\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/multiuser/index.php?r=tbOffice/create
+HTTP_REFERER=http://localhost/multiuser/index.php?r=tbOffice/view&id=3
+---
+2020/01/09 04:09:22 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tbOffice/update')
+#9 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp2\htdocs\multiuser\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/multiuser/index.php?r=tbOffice/update&id=3
+HTTP_REFERER=http://localhost/multiuser/index.php?r=tbOffice/view&id=3
+---
+2020/01/09 04:09:36 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tbOffice/delete')
+#9 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp2\htdocs\multiuser\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/multiuser/index.php?r=tbOffice/delete&id=3
+HTTP_REFERER=http://localhost/multiuser/index.php?r=tbOffice/view&id=3
+---
+2020/01/09 04:09:46 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserLevel), 'You are not aut...')
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tbOffice/admin')
+#9 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp2\htdocs\multiuser\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/multiuser/index.php?r=tbOffice/admin
+HTTP_REFERER=http://localhost/multiuser/index.php?r=tbOffice/view&id=3
+---
+2020/01/09 04:22:27 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting '(' in C:\xampp2\htdocs\multiuser\protected\views\administrador\_form.php:35
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#1 C:\xampp2\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#2 C:\xampp2\htdocs\multiuser\protected\views\administrador\create.php(18): CController->renderPartial('_form', Array)
+#3 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\xampp2\htdocs\multiuser\protected\controllers\AdministradorController.php(80): CController->render('create', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): AdministradorController->actionCreate()
+#9 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador/c...')
+#19 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp2\htdocs\multiuser\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/multiuser/index.php?r=administrador/create
+HTTP_REFERER=http://localhost/multiuser/index.php?r=Administrador
+---

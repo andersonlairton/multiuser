@@ -33,11 +33,13 @@ class TbOfficeController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'users'=>array(Yii::app()->user->name),
+                'expression'=>"Yii::app()->user->isInRole('EDITOR')",
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array(Yii::app()->user->name),
+                'expression'=>"Yii::app()->user->isInRole('EDITOR')",
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
