@@ -5,7 +5,7 @@
  * It contains the authentication method that checks if the provided
  * data can identity the user.
  */
-class UserIdentity extends CUserIdentity
+/*class UserIdentity extends CUserIdentity
 {
 	/**
 	 * Authenticates a user.
@@ -16,29 +16,57 @@ class UserIdentity extends CUserIdentity
 	 * @return boolean whether authentication succeeds.
 	 */
 
-	private $_id,$_username;
+/*	private $_id, $_username;
 
 	public function authenticate()
 	{
-		
-		//acessando o model para pegar as informações
-		$record= TbUsers::model()->findByAttributes(array('login'=>$this->username));
-		
 
-		if($record===null){
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		}else if($record->password!==$this->password){
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		}else{
-			$this->_id=$record->id;
-            $this->username=$record->login;
-            $this->setState('name', $record->name);
-            $this->errorCode=self::ERROR_NONE;
+		//acessando o model para pegar as informações
+		$record = TbUsers::model()->findByAttributes(array('login' => $this->username));
+
+
+		if ($record === null) {
+			$this->errorCode = self::ERROR_USERNAME_INVALID;
+		} else if ($record->password !== $this->password) {
+			$this->errorCode = self::ERROR_PASSWORD_INVALID;
+		} else {
+			$this->_id = $record->id;
+			$this->username = $record->login;
+			$this->setState('name', $record->name);
+			$this->errorCode = self::ERROR_NONE;
 		}
 		return !$this->errorCode;
-
 	}
-	public function getId(){
+	public function getId()
+	{
 		return $this->_id;
 	}
+}*/
+
+class UserIdentity extends CUserIdentity
+{
+            private $_id, $_username;
+  
+            public function authenticate()
+            {
+  
+                        $record = Administrador::model()->findByAttributes(array('usuario'=>$this->username));
+  
+                        if($record === null){
+                                   $this->errorCode = self::ERROR_USERNAME_INVALID;
+                        } elseif ($record->senha !== $this->password){
+                                   $this->errorCode = self::ERROR_PASSWORD_INVALID;
+                        } else {
+                                   $this->_id=$record->id;
+                                   $this->username=$record->usuario;
+                                   $this->setState('nome', $record->nome);
+                                   $this->errorCode=self::ERROR_NONE;
+                        }
+                        return !$this->errorCode;
+            }
+  
+            public function getId()
+            {
+                        return $this->_id;
+            }
 }

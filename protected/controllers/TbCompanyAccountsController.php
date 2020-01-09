@@ -25,7 +25,12 @@ class TbCompanyAccountsController extends Controller
 	 * @return array access control rules
 	 */
 	public function accessRules()
-	{
+	{	
+		$models=TbUsers::model();
+		//var_dump(Yii::app()->user->name);
+		//die;
+		
+		//die;
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
@@ -33,7 +38,8 @@ class TbCompanyAccountsController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'users'=>array(Yii::app()->user->name),
+                'expression'=>"Yii::app()->user->isInRole('ADMIN')",//definindo a regra,entre parentese o nome da regra
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),

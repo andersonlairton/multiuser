@@ -36,6 +36,7 @@ return array(
 
 		'user'=>array(
 			// enable cookie-based authentication
+			'class'=>'application.components.UserLevel',//definindo onde estao as regras do sistema
 			'allowAutoLogin'=>true,
 		),
 
