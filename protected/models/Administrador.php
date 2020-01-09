@@ -28,6 +28,7 @@ class Administrador extends CActiveRecord
 	 */
 	public function rules()
 	{
+		
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
@@ -51,6 +52,7 @@ class Administrador extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'fkOffice'=>array(self::BELONGS_TO,'TbOffice','level'),
 		);
 	}
 

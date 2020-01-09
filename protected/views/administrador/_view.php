@@ -10,7 +10,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('level')); ?>:</b>
-	<?php echo CHtml::encode($data->level); ?>
+	<?php echo CHtml::encode($data->fkOffice->office_name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('superuser')); ?>:</b>
