@@ -21,6 +21,10 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('surname')); ?>:</b>
+	<?php echo CHtml::encode($data->surname); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
@@ -28,10 +32,5 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('user')); ?>:</b>
 	<?php echo CHtml::encode($data->user); ?>
 	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
-	<br />
-
 
 </div>

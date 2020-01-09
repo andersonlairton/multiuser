@@ -34,7 +34,7 @@
 		<?php echo $form->dropDownList($model,'superuser',array(
 			null=>'Are you a super user?',
 			1=>'yes',
-			2=>'no')); 
+			0=>'no')); 
 		?>
 		<?php echo $form->error($model,'superuser'); ?>
 	</div>
@@ -43,6 +43,12 @@
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'surname'); ?>
+		<?php echo $form->textField($model,'surname',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'surname'); ?>
 	</div>
 
 	<div class="row">

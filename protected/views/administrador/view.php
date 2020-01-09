@@ -25,8 +25,8 @@ $this->menu=array(
 		'level',
 		'superuser',
 		'name',
+		'surname',
 		'email',
 		'user',
-		'password',
 	),
 )); ?>

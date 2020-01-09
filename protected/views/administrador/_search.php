@@ -32,6 +32,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'surname'); ?>
+		<?php echo $form->textField($model,'surname',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>300)); ?>
 	</div>

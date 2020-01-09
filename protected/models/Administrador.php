@@ -8,6 +8,7 @@
  * @property integer $level
  * @property integer $superuser
  * @property string $name
+ * @property string $surname
  * @property string $email
  * @property string $user
  * @property string $password
@@ -30,13 +31,15 @@ class Administrador extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('level, superuser, name, email,password', 'required'),
-			array('level, superuser', 'numerical', 'integerOnly' => true),
-			array('name, email, user, password', 'length', 'max' => 300),
+			array('level, superuser, name, surname, email, password', 'required'),
+			array('level, superuser', 'numerical', 'integerOnly'=>true),
+			array('name, email, user, password', 'length', 'max'=>300),
+			array('surname', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, level, superuser, name, email, user, password', 'safe', 'on' => 'search'),
+			array('id, level, superuser, name, surname, email, user, password', 'safe', 'on'=>'search'),
 			['user', 'getCreateLogin'],
+
 		);
 	}
 
@@ -47,7 +50,8 @@ class Administrador extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array();
+		return array(
+		);
 	}
 
 	/**
@@ -60,6 +64,7 @@ class Administrador extends CActiveRecord
 			'level' => 'Level',
 			'superuser' => 'Superuser',
 			'name' => 'Name',
+			'surname' => 'Surname',
 			'email' => 'Email',
 			'user' => 'User',
 			'password' => 'Password',
@@ -82,25 +87,27 @@ class Administrador extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria = new CDbCriteria;
+		$criteria=new CDbCriteria;
 
-		$criteria->compare('id', $this->id);
-		$criteria->compare('level', $this->level);
-		$criteria->compare('superuser', $this->superuser);
-		$criteria->compare('name', $this->name, true);
-		$criteria->compare('email', $this->email, true);
-		$criteria->compare('user', $this->user, true);
-		$criteria->compare('password', $this->password, true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('level',$this->level);
+		$criteria->compare('superuser',$this->superuser);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('surname',$this->surname,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('user',$this->user,true);
+		$criteria->compare('password',$this->password,true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria' => $criteria,
+			'criteria'=>$criteria,
 		));
 	}
 	public function getCreateLogin($attr)
 	{
 		$name = str_replace(" ", "", $this->name);
+		$surname = str_replace(" ", "", $this->surname);
 		if ($this->user == null) {
-			$this->user = $name . '.' . $this->id;
+			$this->user = $name . '.' . $surname;
 			return $this->user;
 		}
 	}
