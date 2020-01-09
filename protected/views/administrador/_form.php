@@ -19,9 +19,13 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<div class="row"> 
 		<?php echo $form->labelEx($model,'nivel'); ?>
-		<?php echo $form->textField($model,'nivel'); ?>
+		<?php
+		$models=TbOffice::model()->findAll(1);
+		$valores=CHtml::listData($models,'id','office_name');
+		echo $form->dropDownList($model,'nivel',array(null=>'select position',$valores));
+		?>
 		<?php echo $form->error($model,'nivel'); ?>
 	</div>
 
