@@ -33,7 +33,6 @@
 					array('label' => 'Home', 'url' => array('/site/index')),
 					array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
 					array('label' => 'Office', 'url' => array('/tbOffice')),
-					array('label' => 'TB_uSER', 'url' => array('/tbusers')),
 					array('label' => 'Permission', 'url' => array('/tbPermission')),
 					array('label' => 'Users', 'url' => array('/Administrador')),
 					array('label' => 'CompanyAccounts', 'url' => array('/tbCompanyAccounts')),
