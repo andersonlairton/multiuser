@@ -18,4 +18,21 @@ $this->menu=array(
 
 <h1>Update Administrador <?php echo $model->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php
+
+	$session = Yii::app()->user->id;
+	
+	$user = Yii::app()->db->createCommand()
+    ->select('*')
+    ->from('administrador')
+    ->where('id=:id', array(':id'=>$session))
+	->queryRow();
+	
+	if($user['level']==2 || $user["superuser"]==1 || $user['id']==$model->id )
+	{
+		$this->renderPartial('_form', array('model'=>$model));
+	}else{
+		throw new Exception("you do not have permission to edit this record", 1);
+		
+	}
+  ?>
