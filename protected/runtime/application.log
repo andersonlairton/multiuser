@@ -6065,3 +6065,21 @@ Stack trace:
 REQUEST_URI=/multiuser/index.php?r=tbOffice/create
 HTTP_REFERER=http://localhost/multiuser/index.php?r=tbOffice
 ---
+2020/03/22 17:04:31 [error] [php] Trying to get property of non-object (C:\xampp2\htdocs\multiuser\protected\components\UserLevel.php:12)
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(393): CAccessRule->evaluateExpression()
+#1 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(289): CAccessRule->isExpressionMatched()
+#2 C:\xampp2\htdocs\yii\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed()
+#3 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter()
+#4 C:\xampp2\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): AdministradorController->filterAccessControl()
+#6 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp2\htdocs\yii\framework\web\CController.php(265): AdministradorController->runActionWithFilters()
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): AdministradorController->run()
+#10 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp2\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp2\htdocs\multiuser\index.php(13): CWebApplication->run()
+REQUEST_URI=/multiuser/index.php?r=administrador/create
+in C:\xampp2\htdocs\multiuser\protected\components\UserLevel.php (12)
+in C:\xampp2\htdocs\multiuser\index.php (13)
